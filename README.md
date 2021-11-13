@@ -3,7 +3,7 @@
 Follow the steps below to install the package inside your local environment.
 
 ## Schema
-![ER-Diagram](/images/ER-Diagram.png)
+![ER-Diagram](/ER-Diagram.png)
 
 ## Installation
 
