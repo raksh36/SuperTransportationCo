@@ -1,18 +1,21 @@
-# Salesforce DX Project: Next Steps
+# Super Transportation Co.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Follow the steps below to install the package inside your local environment.
 
-## How Do You Plan to Deploy Your Changes?
+## Schema
+![ER-Diagram](/images/ER-Diagram.png)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Installation
 
-## Configure Your Salesforce DX Project
+1. Clone the code into your local machine. From command line type `git clone https://github.com/raksh36/SuperTransportationCo.git`
+2. Enable Dev Hub from your personal developer environment.
+3. Open the project in VS Code and authorize your dev environment.
+4. Create a scratch org from command pallete using `SFDX:Create a Default Scratch Org`
+5. Push the changes to scratch org. Open scratch org and Go inside Sales app to check tabs visible inside.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Usage and testing
 
-## Read All About It
+1. Go inside Garage, Bus tabs to create sample records. Use [Location](https://www.latlong.net/) to fill in dummy data on location fields.
+2. Go inside 'Bus Fleet and Details' tab to see the results. Test if it updates Resale Value as expected.
+3. To test nightly maintenance checks - go to hello.apex under scripts\apex in VS Code and run `SFDX: Execute Anonymous Apex with Currently Selected Text` under command pallete.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
