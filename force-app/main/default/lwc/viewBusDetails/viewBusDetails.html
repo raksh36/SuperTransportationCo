@@ -1,0 +1,38 @@
+<template>
+    <lightning-card  title="Bus Details" icon-name="standard:user">
+        <template if:true={recordId}>
+        <lightning-record-edit-form record-id={recordId}  object-api-name="Bus__c" onsuccess={notifyLDS}>
+
+        <lightning-messages> </lightning-messages>
+
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Year__c"> </lightning-input-field>
+                <lightning-input-field field-name="Current_Status__c"> </lightning-input-field>
+                <lightning-input-field field-name="Maximum_Capacity__c"> </lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Number_of_wheels__c"> </lightning-input-field>
+                <lightning-input-field field-name="Odometer_Reading__c"> </lightning-input-field>
+                <lightning-input-field field-name="Air_Conditioning__c"> </lightning-input-field>
+            </div>
+        </div>
+        <div class="slds-var-m-top_medium slds-align_absolute-center">
+            <lightning-button variant="brand" type="submit" name="update" label="Update"></lightning-button>
+            <lightning-button class="slds-var-m-left_medium" label="Cancel" onclick={handleReset}></lightning-button>
+        </div>
+        
+        </lightning-record-edit-form>
+        </template>
+    </lightning-card>
+    <lightning-card  title="Resale Value" icon-name="standard:user">
+        <template if:true={recordId}>
+        <lightning-record-view-form record-id={recordId}  object-api-name="Bus__c">
+            <div class="slds-var-m-top_medium slds-align_absolute-center slds-box">
+                <lightning-output-field field-name="Resale_Value__c"> </lightning-output-field>
+            </div>
+        </lightning-record-view-form>
+        </template>
+    </lightning-card>  
+</template>
