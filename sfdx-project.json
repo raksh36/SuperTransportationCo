@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "Super Transportation Co",
+  "name": "SuperTransportationCo",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "52.0"
