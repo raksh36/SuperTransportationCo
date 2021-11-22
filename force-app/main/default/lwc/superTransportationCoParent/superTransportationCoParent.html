@@ -1,0 +1,28 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-size_2-of-3">
+      <template if:true={BusList}>
+        <div class="slds-grid slds-wrap">
+        <template for:each={BusList} for:item="Bus">
+          <div class="slds-col slds-size_1-of-3" key={Bus.Id}>
+            <lightning-card title={Bus.Name} icon-name="standard:user">
+              <img src={Bus.Bus_Image__c} style="height: 200px; width: 100%" />
+              <div slot="footer">
+                <lightning-button
+                  variant="brand"
+                  name={Bus.Id}
+                  label="View Details"
+                  onclick={showRecord}
+                ></lightning-button>
+              </div>
+            </lightning-card>
+          </div>
+        </template>
+        </div>
+      </template>
+    </div>
+    <div class="slds-col slds-size_1-of-3">
+        <c-view-bus-details-child onpass={refreshBusIdTile} get-bus-id={passBusId}></c-view-bus-details-child>
+    </div>
+  </div>
+</template>
